@@ -81,10 +81,10 @@ blueprint:
       selector:
       default: []
       selector:
-	entity:
-	  domain:
-	  - switch
-	  multiple: false
+        entity:
+          domain:
+          - switch
+          multiple: false
 mode: restart
 max_exceeded: silent
 trigger:
