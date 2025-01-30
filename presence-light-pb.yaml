@@ -98,7 +98,7 @@ condition:
   below: !input light_threshold
 - condition: state
   entity_id: !input block_action
-  state: "on"
+  state: "off"
 action:
 - alias: Turn on the light
   service: light.turn_on
