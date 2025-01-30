@@ -83,7 +83,7 @@ blueprint:
       selector:
         entity:
           domain:
-          - switch
+          - input_boolean
           multiple: false
 mode: restart
 max_exceeded: silent
