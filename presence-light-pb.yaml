@@ -1,6 +1,7 @@
 blueprint:
   name: PB Presence-activated Light
   description: Turn on a light when presence is detected.
+  source_url: https://github.com/p8mty/blueprints/blob/main/presence-light-pb.yaml
   domain: automation
   input:
     presence_entity:
@@ -95,6 +96,9 @@ condition:
 - condition: numeric_state
   entity_id: !input light_sensor
   below: !input light_threshold
+- condition: state
+  entity_id: !input block_action
+  state: "on"
 action:
 - alias: Turn on the light
   service: light.turn_on
