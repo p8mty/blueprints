@@ -33,6 +33,17 @@ blueprint:
           unit_of_measurement: percentage
           mode: slider
           step: 1.0
+    color_temp:
+      name: Colour Temperature
+      description: Colour temperture that the light will turn into once is turned on
+      default: 2700
+      selector:
+        number:
+          min: 2300
+          max: 3300
+          unit_of_measurement: K
+          mode: slider
+          step: 50
     no_motion_wait:
       name: Wait time
       description: Time to leave the light on after last motion is detected.
@@ -105,6 +116,7 @@ action:
   target: !input light_target
   data:
     brightness_pct: !input bright_percentage
+    kelvin: !input color_temp
 - alias: Wait until there is no motion from device
   wait_for_trigger:
     platform: state
