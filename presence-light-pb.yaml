@@ -22,6 +22,7 @@ blueprint:
           entity:
           - domain:
             - light
+            - switch
     bright_percentage:
       name: Bright Percentage
       description: Brightness level that the light will turn into once is turned on
